@@ -14,6 +14,7 @@ public class AppConfig {
         try(InputStream input = AppConfig.class.getClassLoader().getResourceAsStream("application.properties")) {
             if (input != null) {
                 properties.load(input);
+                System.out.println(properties.getProperty("application.name") + ":\n");
                 setProblemNumber();
             }
         } catch (IOException ioException) {
