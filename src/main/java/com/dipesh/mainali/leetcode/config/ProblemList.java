@@ -44,7 +44,7 @@ public class ProblemList {
     }
 
     public static Solution getSolution(Integer problemNumber) {
-        return numberToProblem.get(problemNumber).getSolution();
+        return numberToProblem.getOrDefault(problemNumber, numberToProblem.get(0)).getSolution();
     }
 
     public static Integer getProblemNumber (String problemName) {
